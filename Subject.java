@@ -1,4 +1,15 @@
-
+/**
+ * ------------------------------------------------------------
+ * Class Name: Subject
+ * Author: Puthirith, PagnaSakal
+ * Course: Introduction to Software Engineering
+ * Lab: SE - Lab 06 (Coding Standards)
+ * Description:
+ *   This class represents a Year 2 subject/course.
+ *   It follows Java coding standards, naming conventions,
+ *   and limited use of global variables.
+ * ------------------------------------------------------------
+ */
 
 public class Subject {
         /* =======================
@@ -37,7 +48,9 @@ public class Subject {
          this.name = name; 
         }
 
-
+    public int getTotalCredits() {
+         return totalCredits; 
+        }
 
     public void setTotalCredits(int totalCredits) { 
          if (totalCredits < 0 || totalCredits > MAX_CREDITS) {
@@ -49,12 +62,16 @@ public class Subject {
     public int getTotalHours() {
          return totalHours; 
         }
-  
+    public void setTotalHours(int totalHours) {
+         this.totalHours = totalHours; 
+        }
 
     public int getPresentCount() {
          return presentCount; 
         }
-  
+    public void setPresentCount(int presentCount) {
+         this.presentCount = presentCount; 
+        }
 
     public int getLateCount() {
          return lateCount; 

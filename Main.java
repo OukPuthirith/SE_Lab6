@@ -5,7 +5,8 @@ public class Main {
         Subject x = new Subject();
         x.setName("Introduction to SE");
         x.setTotalCredits(3);
-       
+        x.setTotalHours(45);
+        x.setPresentCount(10);
         x.setLateCount(2);
         x.setAbsentCount(1);
         System.out.println(x);
