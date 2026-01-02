@@ -1,4 +1,13 @@
 
+/**
+ * ------------------------------------------------------------
+ * Class Name: Session
+ * Author: Sakal, Puthirith
+ * Course: Introduction to Software Engineering
+ * Description:
+ *   Represents a study session during a day.
+ * ------------------------------------------------------------
+ */
 public class Session {
     // Variables to store session time
     private int start;
@@ -35,7 +44,13 @@ public class Session {
      * @throws IllegalArgumentException if startTime >= endTime
      */
     
-
+    public void setDuration(int start, int stop) {
+        if (start < 0 || stop < 0 || stop < start) {
+            throw new IllegalArgumentException("Invalid start or stop time");
+        }
+        this.start = start;
+        this.stop = stop;
+    }
 
     // Get how long the session lasts
     public int getDuration() {
@@ -86,13 +101,13 @@ public class Session {
     // Main method to test the class
     public static void main(String[] args) {
         Session mySession = new Session("Java Basics", "Mr. Smith");
-
+        mySession.setDuration(7,9 );
         mySession.displayInfo();
         mySession.startSession();
         mySession.endSession();
 
         Session defaultSession = new Session("Default Session");
-
+        defaultSession.setDuration(14,12);
         defaultSession.startSession();
         defaultSession.displayInfo();
 
